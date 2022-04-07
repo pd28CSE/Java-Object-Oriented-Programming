@@ -3,7 +3,7 @@ import java.util.Queue;
 
 public class App {
     public static void main(String[] args) {
-      //  stackPrac();
+        stackPrac();
       // queuePrac();
       //  arrayListPrac();
     }
@@ -18,10 +18,10 @@ public class App {
 
         /* Stack
 
-        push(),
-        pop(),
-        peek(),
-        empty(),
+        push(),  
+        pop(),   // return last item and remove from the stack
+        peek(),   // return last item
+        empty(),  // return true if stack is Empty, otherwise return false
         search(),  // return position , not index number
 
         */
@@ -99,13 +99,14 @@ public class App {
         /*
            add(),
            add(index, item),
-           set(index, item),
+           set(index, item),        // if index number is out of range, then get a exception 
            get(index),
            size(),
            isEmpty(),
-           remove(index),
-           remove(item),
-           contains(item), // return true if item is exists in the list, otherwise false
+           remove(item)            // if item found then frmove it, otherwise nothing to do
+           remove(index_number)    // if index number is out of range, then get a exception 
+           contains(item),         // return true if item is exists in the list, otherwise false
+           clear()                 // clear the arrayList
         */
         System.out.println(arrayList.size());
         System.out.println(arrayList.isEmpty());
