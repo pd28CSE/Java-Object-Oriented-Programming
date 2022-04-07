@@ -3,12 +3,15 @@ public class App {
         System.out.println("Main Start\n");
 
        // threadFnc();
+       //  threadUseRunnable();
        threadFncWithSynchronized();
-      //  threadUseRunnable();
+      
        
         System.out.println("Main End\n");
     }
 
+
+    
 
     public static void threadFnc(){
         MyThread myThread1 = new MyThread();
@@ -35,6 +38,24 @@ public class App {
         }
     }
 
+
+
+    // ---------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------
+
+    public static void threadUseRunnable(){
+        MyThreadWithRunnable myThreadWithRunnable = new MyThreadWithRunnable();
+
+        Thread myThread1 = new Thread(myThreadWithRunnable, "Runnable 1");
+        Thread myThread2 = new Thread(myThreadWithRunnable, "Runnable 2");
+
+        myThread1.start();
+        myThread2.start();
+    }
+
+
+
+
     // ---------------------------------------------------------------------------------------------
     // ---------------------------------------------------------------------------------------------
 
@@ -46,17 +67,5 @@ public class App {
 
         myThreadWithSynchronized1.start();
         myThreadWithSynchronized2.start();
-    }
-
-
-
-    public static void threadUseRunnable(){
-        MyThreadWithRunnable myThreadWithRunnable = new MyThreadWithRunnable();
-
-        Thread myThread1 = new Thread(myThreadWithRunnable, "Runnable 1");
-        Thread myThread2 = new Thread(myThreadWithRunnable, "Runnable 2");
-
-        myThread1.start();
-        myThread2.start();
     }
 }
